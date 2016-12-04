@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <body>
+        <ui:composition>
+            <p:growl id="msgs" showDetail="true"/>
+            <p:dataTable id="cars1" var="car" value="#{carroMB.carroLista}" style="margin-bottom:20px">
+                <!--<p:ajax event="rowEdit" listener="#{carroMB.onRowEdit}" update=":form:msgs" />-->
+                <!--<p:ajax event="rowEditCancel" listener="#{carroMB.onRowCancel}" update=":form:mcsgs" />-->
+
+                <p:column headerText="Placa">
+                    <!--<p:cellEditor>-->
+                        <h:outputText value="#{car.placa}" />
+                        <!--<f:facet name="input"><p:inputText id="modelInput" value="#{car.placa}" style="width:100%"/></f:facet>-->
+                    <!--</p:cellEditor>-->
+                </p:column>
+
+                <p:column headerText="Modelo">
+                    <!--<p:cellEditor>-->
+                        <h:outputText value="#{car.modelo}" />
+                        <!--<f:facet name="input"><p:inputText value="#{car.modelo}" style="width:100%" label="Year"/></f:facet>-->
+                    <!--</p:cellEditor>-->
+                </p:column>
+
+                <p:column headerText="Cor">
+                    <!--<p:cellEditor>-->
+                        <h:outputText value="#{car.cor}" />
+                        <!--<f:facet name="input"><p:inputText value="#{car.cor}" style="width:100%" label="Year"/></f:facet>-->
+                    <!--</p:cellEditor>-->
+                </p:column>
+
+                <!--<p:column style="width:32px">-->
+                    <!--<p:rowEditor />-->
+                <!--</p:column>-->
+            </p:dataTable>
+        </ui:composition>
+    </body>
+</html>

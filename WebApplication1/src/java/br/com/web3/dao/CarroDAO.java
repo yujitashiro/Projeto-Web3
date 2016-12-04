@@ -98,13 +98,13 @@ public class CarroDAO {
     public List<Carro> listar() throws SQLException {
         List<Carro> carros = new ArrayList<Carro>();
         try {
-            ResultSet rs = stmt.executeQuery("SELECT * FROM carro ORDER BY modelo");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM carro");
             while (rs.next()) {
                 Carro carro = fabrica.criarCarro();
-//                carro.setCodigo(rs.getInt("codigo"));
-//                carro.setNome(rs.getString("nome"));
-//                carro.setTelefone(rs.getString("telefone"));
-
+                carro.setId(rs.getInt("id_carro"));
+                carro.setCor(rs.getString("cor"));
+                carro.setModelo(rs.getString("modelo"));
+                carro.setPlaca(rs.getString("placa"));
                 carros.add(carro);
             }
 

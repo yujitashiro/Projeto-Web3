@@ -23,7 +23,9 @@ public class CarroMB implements Serializable {
     /**
      * Creates a new instance of PessoaMB
      */
-    public CarroMB() {
+    public CarroMB() throws SQLException {
+        CarroDAO daoCarro = new CarroDAO();
+        carroLista = daoCarro.listar();
     }
 
     public Carro getCarro() {
@@ -47,6 +49,8 @@ public class CarroMB implements Serializable {
         daoCarro.inserir(carro);
         carroLista.add(carro);
         carro = new Carro();
+        FacesContext context = FacesContext.getCurrentInstance();
+        context.addMessage(null, new FacesMessage("Sucesso",  "Carro cadastrado com sucesso!!") );
     }
 
     public void onRowEdit(RowEditEvent event) {
