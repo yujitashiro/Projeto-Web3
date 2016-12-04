@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <f:view contentType="text/html">
+        <h:head>
+            <f:facet name="first">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>I-Park</title>
+            </f:facet>
+        </h:head>
+
+        <h:body style="height: 600px;">
+            <div id="header" style="width: 100%; height: 75px !important;">
+		<ui:insert name="header" >
+		  <ui:include src="/template/header_template.xhtml" />
+		</ui:insert>
+	    </div>
+            <h:form style="height: calc(100% - 75px); width: 100%;">
+                <p:layout style="height: 100%;">
+                    <p:layoutUnit position="west" size="242"  collapsible="false" style="height: 100% !important;">
+                        <p:menu>
+                            <p:submenu label="Entrada">
+                                <p:menuitem value="Registrar" onclick="PF('dlg').show();" />
+                                <p:menuitem value="Consultar" onclick ="PF('dlg2').show();" />
+                            </p:submenu>
+                        </p:menu>
+                    </p:layoutUnit>
+                    <p:dialog header="Cadastrar Veículo" widgetVar="dlg" resizable="false">
+                        <ui:include src="carro_cadastro.xhtml"></ui:include>
+                    </p:dialog>
+                    <p:dialog header="Listagem Veículo" widgetVar="dlg2" resizable="false">
+                        <!--<ui:include src="carro_datatable.xhtml"></ui:include>-->
+                    </p:dialog>
+                    <p:layoutUnit position="center">
+                        <ui:insert>
+                            <!--<ui:include src="carro_datatable.xhtml"></ui:include>-->
+                            <ui:include src="/template/carro_cadastro.xhtml" />
+                        </ui:insert>
+                    </p:layoutUnit>
+<!--                    <div id="content">
+                        <ui:insert name="content" >
+                          <ui:include src="/template/carro_cadastro.xhtml" />
+                        </ui:insert>
+                    </div>-->
+
+                </p:layout>
+            </h:form>
+        </h:body>
+
+    </f:view>
+</html>
+
