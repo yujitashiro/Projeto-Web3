@@ -28,21 +28,8 @@
                     <f:ajax event="blur" render="@this" />
                 </p:inputText>
                 <br />
-                <p:outputLabel for="country" value="Setor: " />
-                <p:selectOneMenu id="country" value="#{dropdownView.country}" style="width:150px">
-                    <p:ajax listener="#{dropdownView.onCountryChange}" update="city" />
-                    <f:selectItem itemLabel="Selecionar Setor" itemValue="" noSelectionOption="true" />
-                    <f:selectItems value="#{dropdownView.countries}" />
-                </p:selectOneMenu>
-                <br />
-                <p:outputLabel for="city" value="Vaga: " />
-                <p:selectOneMenu id="city" value="#{dropdownView.city}" style="width:150px">
-                    <f:selectItem itemLabel="Selecionar Vaga" itemValue="" noSelectionOption="true" />
-                    <f:selectItems value="#{dropdownView.cities}" />
-                </p:selectOneMenu>
-                <br/>
                 <p:commandButton id="btnE" value="Enviar" type="submit" action="#{carroMB.salvarCarro}"
-                                 onclick="PF('dlg').hide();"/>
+                                 onclick="PF('dlg').hide();" />
             </h:panelGrid>
         </h:form>
     </h:body>

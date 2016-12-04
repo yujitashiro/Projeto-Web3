@@ -14,7 +14,6 @@
         </h:head>
 
         <h:body style="height: 600px; background-image: url(texture.jpg); ">
-            <p:growl id="growl" showDetail="true"/>  
             <div id="header" style="width: 100%; height: 75px !important;">
 		<ui:insert name="header" >
 		  <ui:include src="/template/header_template.xhtml" />
@@ -34,13 +33,14 @@
                         <ui:include src="carro_cadastro.xhtml"></ui:include>
                     </p:dialog>
                     <p:dialog header="Listagem Veículo" widgetVar="dlg2" resizable="false">
-                        <!--<ui:include src="/template/carro_datatable.xhtml"></ui:include>-->
-                    </p:dialog>
-                    <p:layoutUnit position="center">
                         <ui:insert>
                             <ui:include src="/template/carro_datatable.xhtml" />
-                            <!--<ui:include src="/template/carro_cadastro.xhtml" />-->
                         </ui:insert>
+                    </p:dialog>
+                    <p:layoutUnit position="center">
+<!--                        <ui:insert>
+                            <ui:include src="/template/carro_datatable.xhtml" />
+                        </ui:insert>-->
                     </p:layoutUnit>
 <!--                    <div id="content">
                         <ui:insert name="content" >

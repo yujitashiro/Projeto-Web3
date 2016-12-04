@@ -1,48 +1,42 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 
+    1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:p="http://primefaces.org/ui"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
+      xmlns:p="http://primefaces.org/ui">
 
-    <body>
-	    <ui:composition>
-                <h:form>
-                    <h:panelGrid columns="3">
-                        <p:outputLabel value="Placa :"/>
-                        <p:inputText id="nome" maxlength="7" value="#{carroMB.carro.placa}" converter="upperCaseConverter" size="20"  required="true" requiredMessage="Campo Obrigatório">
-                            <f:ajax event="blur" render="@this" />
-                        </p:inputText>
-                        <h:message for="nome" />
-                        <p:outputLabel value="Cor:"/>
-                        <p:inputText id="cor" value="#{carroMB.carro.cor}" size="20" required="true" requiredMessage="Campo Obrigatório">
-                            <f:ajax event="blur" render="@this" />
-                        </p:inputText>
-                        <h:message for="end" />
-                        <p:outputLabel value="Modelo:"/>
-                        <p:inputText id="modelo" value="#{carroMB.carro.modelo}" size="20" required="true" requiredMessage="Campo Obrigatório">
-                            <f:ajax event="blur" render="@this" />
-                        </p:inputText>
-                        <br />
-                        <p:outputLabel for="country" value="Setor: " />
-                        <p:selectOneMenu id="country" value="#{dropdownView.country}" style="width:150px">
-                            <p:ajax listener="#{dropdownView.onCountryChange}" update="city" />
-                            <f:selectItem itemLabel="Selecionar Setor" itemValue="" noSelectionOption="true" />
-                            <f:selectItems value="#{dropdownView.countries}" />
-                        </p:selectOneMenu>
-                        <br />
-                        <p:outputLabel for="city" value="Vaga: " />
-                        <p:selectOneMenu id="city" value="#{dropdownView.city}" style="width:150px">
-                            <f:selectItem itemLabel="Selecionar Vaga" itemValue="" noSelectionOption="true" />
-                            <f:selectItems value="#{dropdownView.cities}" />
-                        </p:selectOneMenu>
-                        <br/>
-                        <p:commandButton id="btnE" value="Enviar" type="submit" action="#{carroMB.salvarCarro}" onclick="PF('dlg').hide();"/>
-                    </h:panelGrid>
-                </h:form>
-	    </ui:composition>
-    </body>
+    <h:head>
+        <title>Cadastro</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:panelGrid columns="3">
+                <p:outputLabel value="Placa :"/>
+                <p:inputText id="nome" maxlength="7" value="#{carroMB.carro.placa}"
+                             converter="upperCaseConverter" size="20"  required="true" 
+                             requiredMessage="Campo Obrigatório">
+                    <f:ajax event="blur" render="@this" />
+                </p:inputText>
+                <h:message for="nome" />
+                <p:outputLabel value="Cor:"/>
+                <p:inputText id="cor" value="#{carroMB.carro.cor}" size="20" required="true"
+                             requiredMessage="Campo Obrigatório">
+                    <f:ajax event="blur" render="@this" />
+                </p:inputText>
+                <h:message for="end" />
+                <p:outputLabel value="Modelo:"/>
+                <p:inputText id="modelo" value="#{carroMB.carro.modelo}" size="20" required="true"
+                             requiredMessage="Campo Obrigatório">
+                    <f:ajax event="blur" render="@this" />
+                </p:inputText>
+                <br />
+                <p:commandButton id="btnE" value="Enviar" type="submit" action="#{carroMB.salvarCarro}"
+                                 onclick="PF('dlg').hide();" />
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+
 </html>
