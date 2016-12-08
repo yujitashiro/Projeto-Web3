@@ -40,15 +40,6 @@ public class Conexao {
         return null;
     }
 
-    private Conexao() {
-        try {
-            Class.forName(driver);
-            conn = (Connection) DriverManager.getConnection(URL, USER, SENHA);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
     public void fecharConexao() {
         try {
             conn.close();
