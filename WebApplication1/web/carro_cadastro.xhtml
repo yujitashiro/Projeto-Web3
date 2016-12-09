@@ -28,6 +28,13 @@
                     <f:ajax event="blur" render="@this" />
                 </p:inputText>
                 <br />
+
+                <p:outputLabel for="vaga" value="Vaga " />
+                <p:selectOneMenu id="vaga" value="#{vagaManagedBean.vaga.setor}" style="width:150px">
+                    <f:selectItem itemLabel="Select Country" itemValue="" noSelectionOption="true" />
+                    <f:selectItems value="#{vagaManagedBean.vagas}" />
+                </p:selectOneMenu>
+
                 <p:commandButton id="btnE" value="Enviar" type="submit" action="#{carroMB.salvarCarro}"
                                  onclick="PF('dlg').hide();" />
             </h:panelGrid>

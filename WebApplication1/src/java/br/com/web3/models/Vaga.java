@@ -13,7 +13,6 @@ public abstract class Vaga {
     
    private int id;
    private String setor;
-   private String numeroSetor;
    private boolean ocupado;
    private int veiculo;
    
@@ -35,15 +34,7 @@ public abstract class Vaga {
     public void setSetor(String setor) {
         this.setor = setor;
     }
-
-    public String getNumeroSetor() {
-        return numeroSetor;
-    }
-
-    public void setNumeroSetor(String numeroSetor) {
-        this.numeroSetor = numeroSetor;
-    }
-
+    
     public boolean isOcupado() {
         return ocupado;
     }
