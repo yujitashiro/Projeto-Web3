@@ -16,12 +16,12 @@
         <h:body>
             <h:form id="teste2">
 
-                <p:dataTable id="vagas1" var="vaga" value="#{vagaManagedBean.vagas}" editable="true" style="margin-bottom:20px">
+                <p:dataTable id="vagas1" var="vaga" value="#{vagaBean.vagas}" editable="true" style="margin-bottom:20px">
                     <f:facet name="header">
                         Vagas Ocupadas
                     </f:facet>
 
-                    <p:ajax event="rowEdit" listener="#{vagaManagedBean.onRowEdit}" update="vagas1" />
+                    <p:ajax event="rowEdit" listener="#{vagaBean.onRowEdit}" update="vagas1" />
 
                     <p:column headerText="Vaga">
                         <p:cellEditor>

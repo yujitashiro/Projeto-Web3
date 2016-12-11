@@ -42,6 +42,37 @@ public class VagaDAO {
         conexao = Conexao.getInstancia();
         stmt = (Statement) conexao.createStatement();
     }
+    
+    public List<Vaga> listarTodas() throws SQLException {
+        List<Vaga> vagas = new ArrayList<>();
+        FactoryVaga fvaga = new FactoryVaga();
+
+        try {
+            ResultSet rs = stmt.executeQuery("SELECT * FROM vaga");
+            while (rs.next()) {
+                Vaga vaga;
+                if (rs.getString("setor").contains("C")) {
+                    vaga = fvaga.criarVagaMoto();
+                } else {
+                    vaga = fvaga.criarVagaCarro();
+                }
+
+                vaga.setId(rs.getInt("id_vaga"));
+                vaga.setSetor(rs.getString("setor"));
+                vaga.setOcupado(rs.getBoolean("ocupada"));
+                vaga.setVeiculo(rs.getInt("id_carro"));
+
+                vagas.add(vaga);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            conexao.close();
+        }
+
+        return vagas;
+    }
 
     public List<Vaga> listar() throws SQLException {
         List<Vaga> vagas = new ArrayList<>();
