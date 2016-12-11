@@ -1,21 +1,40 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package br.com.web3.models;
 
-public class Vaga {
-
-   private long id;
+/**
+ *
+ * @author jose.jorge.dos.neto
+ */
+public abstract class Vaga {
+    
+   private int id;
    private String setor;
-   private String numeroSetor;
    private boolean ocupado;
-   Carro carro;
-
-    public long getId() {
+   private int veiculo;
+   
+   public Vaga(){
+       
+   }
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
+    public String getSetor() {
+        return setor;
+    }
+
+    public void setSetor(String setor) {
+        this.setor = setor;
+    }
+    
     public boolean isOcupado() {
         return ocupado;
     }
@@ -24,28 +43,15 @@ public class Vaga {
         this.ocupado = ocupado;
     }
 
+    public int getVeiculo() {
+        return veiculo;
+    }
+
+    public void setVeiculo(int veiculo) {
+        this.veiculo = veiculo;
+    }
     
-    public String getSetor() {
-        return setor;
-    }
-
-    public void setSetor(String setor) {
-        this.setor = setor;
-    }
-
-    public String getNumeroSetor() {
-        return numeroSetor;
-    }
-
-    public void setNumeroSetor(String numeroSetor) {
-        this.numeroSetor = numeroSetor;
-    }
-
-    public Carro getCarro() {
-        return carro;
-    }
-
-    public void setCarro(Carro carro) {
-        this.carro = carro;
-    }
+    abstract public double getValorHora(double horas);
+   
+   
 }

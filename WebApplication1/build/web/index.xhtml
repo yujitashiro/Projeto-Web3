@@ -15,10 +15,10 @@
 
         <h:body style="height: 600px; background-image: url(texture.jpg); ">
             <div id="header" style="width: 100%; height: 75px !important;">
-		<ui:insert name="header" >
-		  <ui:include src="/template/header_template.xhtml" />
-		</ui:insert>
-	    </div>
+                <ui:insert name="header" >
+                    <ui:include src="/template/header_template.xhtml" />
+                </ui:insert>
+            </div>
             <h:form style="height: calc(100% - 75px); width: 100%;">
                 <p:layout style="height: 100%;">
                     <p:layoutUnit position="west" size="242"  collapsible="false" style="height: 100% !important;">
@@ -26,6 +26,7 @@
                             <p:submenu label="Entrada">
                                 <p:menuitem value="Registrar" onclick="PF('dlg').show();" />
                                 <p:menuitem value="Consultar" onclick ="PF('dlg2').show();" />
+                                <p:menuitem value="Liberar Vaga" onclick ="PF('dlg3').show();" />
                             </p:submenu>
                         </p:menu>
                     </p:layoutUnit>
@@ -37,16 +38,19 @@
                             <ui:include src="/template/carro_datatable.xhtml" />
                         </ui:insert>
                     </p:dialog>
+                    <p:dialog header="Liberar Vaga" widgetVar="dlg3" resizable="true">
+                        <ui:include src="liberar_vaga.xhtml"></ui:include>
+                    </p:dialog>
                     <p:layoutUnit position="center">
-<!--                        <ui:insert>
-                            <ui:include src="/template/carro_datatable.xhtml" />
-                        </ui:insert>-->
+                        <!--                        <ui:insert>
+                                                    <ui:include src="/template/carro_datatable.xhtml" />
+                                                </ui:insert>-->
                     </p:layoutUnit>
-<!--                    <div id="content">
-                        <ui:insert name="content" >
-                          <ui:include src="/template/carro_cadastro.xhtml" />
-                        </ui:insert>
-                    </div>-->
+                    <!--                    <div id="content">
+                                            <ui:insert name="content" >
+                                              <ui:include src="/template/carro_cadastro.xhtml" />
+                                            </ui:insert>
+                                        </div>-->
 
                 </p:layout>
             </h:form>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
@@ -13,3 +14,21 @@
         </group>
     </open-files>
 </project-private>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Jorge/Documents/NetBeansProjects/Projeto-Web3_IFPE/WebApplication1/src/java/br/com/web3/controllers/VagaManagedBean.java</file>
+            <file>file:/C:/Users/Jorge/Documents/NetBeansProjects/Projeto-Web3_IFPE/WebApplication1/src/java/br/com/web3/dao/VagaDAO.java</file>
+            <file>file:/C:/Users/Jorge/Documents/NetBeansProjects/Projeto-Web3_IFPE/WebApplication1/web/carro_cadastro.xhtml</file>
+            <file>file:/C:/Users/Jorge/Documents/NetBeansProjects/Projeto-Web3_IFPE/WebApplication1/src/java/br/com/web3/models/Vaga.java</file>
+            <file>file:/C:/Users/Jorge/Documents/NetBeansProjects/Projeto-Web3_IFPE/WebApplication1/web/index.xhtml</file>
+            <file>file:/C:/Users/Jorge/Documents/NetBeansProjects/Projeto-Web3_IFPE/WebApplication1/src/java/br/com/web3/models/VagaCarro.java</file>
+            <file>file:/C:/Users/Jorge/Documents/NetBeansProjects/Projeto-Web3_IFPE/WebApplication1/web/liberar_vaga.xhtml</file>
+            <file>file:/C:/Users/Jorge/Documents/NetBeansProjects/Projeto-Web3_IFPE/WebApplication1/src/java/br/com/web3/models/VagaMoto.java</file>
+        </group>
+    </open-files>
+</project-private>
+>>>>>>> origin/master
