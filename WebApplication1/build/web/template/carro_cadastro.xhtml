@@ -23,18 +23,18 @@
                 <h:message for="nome" />
                 <p:outputLabel value="Cor:"/>
                 <p:inputText id="cor" value="#{carroMB.carro.cor}" size="20" required="true"
-                             requiredMessage="Campo Obrigatório">
+                             converter="upperCaseConverter" requiredMessage="Campo Obrigatório">
                     <f:ajax event="blur" render="@this" />
                 </p:inputText>
                 <h:message for="end" />
                 <p:outputLabel value="Modelo:"/>
                 <p:inputText id="modelo" value="#{carroMB.carro.modelo}" size="20" required="true"
-                             requiredMessage="Campo Obrigatório">
+                             converter="upperCaseConverter" requiredMessage="Campo Obrigatório">
                     <f:ajax event="blur" render="@this" />
                 </p:inputText>
                 <br />
                 <p:commandButton id="btnE" value="Enviar" type="submit" action="#{carroMB.salvarCarro}"
-                                 onclick="PF('dlg').hide();" />
+                                 oncomplete=""/>
             </h:panelGrid>
         </h:form>
     </h:body>

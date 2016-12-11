@@ -19,7 +19,7 @@ public class VagaBean implements Serializable {
 
     public VagaBean() throws SQLException {
         VagaDAO daoVaga = new VagaDAO();
-        vagas = daoVaga.listar();
+        vagas = daoVaga.listarTodas();
     }
 
     public List<Vaga> getVagas() {

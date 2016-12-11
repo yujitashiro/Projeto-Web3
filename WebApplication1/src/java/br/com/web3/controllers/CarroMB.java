@@ -10,6 +10,7 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
+import org.primefaces.context.RequestContext;
 import org.primefaces.event.CellEditEvent;
 import org.primefaces.event.RowEditEvent;
 
@@ -45,12 +46,18 @@ public class CarroMB implements Serializable {
     }
 
     public void salvarCarro() throws SQLException {
-        CarroDAO daoCarro = new CarroDAO();
-        daoCarro.inserir(carro);
-        carroLista.add(carro);
-        carro = new Carro();
-        FacesContext context = FacesContext.getCurrentInstance();
-        context.addMessage(null, new FacesMessage("Sucesso",  "Carro cadastrado com sucesso!!") );
+        try {
+          CarroDAO daoCarro = new CarroDAO();
+            daoCarro.inserir(carro);
+            carroLista.add(carro);
+            carro = new Carro();
+            RequestContext context = RequestContext.getCurrentInstance();
+            context.execute("alert('Carro cadastrado com sucesso!!')");
+//            context.update("growl");
+            context.execute("$('.center').load('template/carro_datatable.xhtml')");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void onRowEdit(RowEditEvent event) {

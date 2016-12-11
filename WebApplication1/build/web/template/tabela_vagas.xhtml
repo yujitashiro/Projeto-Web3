@@ -16,7 +16,7 @@
                     <c:if test="${vaga.id == 0 || vaga.id == 7 || vaga.id == 14}">
                         <tr>
                     </c:if>
-                        <td>
+                    <td style="height: 95; width: 50">
                             <h:outputText value="#{vaga.setor}" />
                             <p:panel rendered="#{vaga.ocupado}">
                                 <img src="carro.jpg" height="75" width="50" style="float: left;"/>
