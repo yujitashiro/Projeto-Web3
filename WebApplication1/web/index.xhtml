@@ -24,9 +24,9 @@
                     <p:layoutUnit position="west" size="242"  collapsible="false" style="height: 100% !important;">
                         <p:menu>
                             <p:submenu label="Entrada">
-                                <p:menuitem value="Registrar" onclick="PF('dlg').show();" />
-                                <p:menuitem value="Consultar" onclick ="PF('dlg2').show();" />
-                                <p:menuitem value="Liberar Vaga" onclick ="PF('dlg3').show();" />
+                                <p:menuitem value="Registrar" onclick="$('.center').load('template/carro_cadastro.xhtml')" />
+                                <p:menuitem value="Consultar" onclick="$('.center').load('template/carro_datatable.xhtml')" />
+                                <p:menuitem value="Liberar Vaga" onclick ="$('.center').load('liberar_vaga.xhtml')" />
                             </p:submenu>
                         </p:menu>
                     </p:layoutUnit>
@@ -41,7 +41,7 @@
                     <p:dialog header="Liberar Vaga" widgetVar="dlg3" resizable="true">
                         <ui:include src="liberar_vaga.xhtml"></ui:include>
                     </p:dialog>
-                    <p:layoutUnit position="center">
+                    <p:layoutUnit position="center" styleClass="center">
                         <!--                        <ui:insert>
                                                     <ui:include src="/template/carro_datatable.xhtml" />
                                                 </ui:insert>-->
