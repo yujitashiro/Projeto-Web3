@@ -15,23 +15,24 @@
         <h:form>
             <h:panelGrid columns="3">
                 <p:outputLabel value="Placa :"/>
-                <p:inputText id="nome" maxlength="7" value="#{carroMB.placa}"
+                <p:inputText id="placa" maxlength="7" value="#{carroMB.placa}"
                              converter="upperCaseConverter" size="20"  required="true" 
                              requiredMessage="Campo Obrigatório">
                     <f:ajax event="blur" render="@this" />
                 </p:inputText>
-                <h:message for="nome" />
+                <h:message for="placa" style="color: red; float: left;"/>
                 <p:outputLabel value="Cor:"/>
                 <p:inputText id="cor" value="#{carroMB.cor}" size="20" required="true"
                              converter="upperCaseConverter" requiredMessage="Campo Obrigatório">
                     <f:ajax event="blur" render="@this" />
                 </p:inputText>
-                <h:message for="end" />
+                <h:message for="cor" />
                 <p:outputLabel value="Modelo:"/>
                 <p:inputText id="modelo" value="#{carroMB.modelo}" size="20" required="true"
                              converter="upperCaseConverter" requiredMessage="Campo Obrigatório">
                     <f:ajax event="blur" render="@this" />
                 </p:inputText>
+                <h:message for="modelo" style="color: red"/>
                 <br />
                 <p:commandButton id="btnE" value="Enviar" type="submit" action="#{carroMB.salvarCarro}"
                                  oncomplete=""/>
