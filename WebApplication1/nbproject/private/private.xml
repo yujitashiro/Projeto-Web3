@@ -3,15 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Yuji%20Tashiro/Documents/Web3/WebApplication1/web/carro_cadastro.xhtml</file>
-            <file>file:/C:/Users/Yuji%20Tashiro/Documents/Web3/WebApplication1/web/template/header_template.xhtml</file>
-            <file>file:/C:/Users/Yuji%20Tashiro/Documents/Web3/WebApplication1/src/java/br/com/web3/dao/CarroDAO.java</file>
-            <file>file:/C:/Users/Yuji%20Tashiro/Documents/Web3/WebApplication1/web/template/carro_cadastro.xhtml</file>
-            <file>file:/C:/Users/Yuji%20Tashiro/Documents/Web3/WebApplication1/src/java/org/primefaces/showcase/view/ajax/DropdownView.java</file>
-            <file>file:/C:/Users/Yuji%20Tashiro/Documents/Web3/WebApplication1/web/index.xhtml</file>
-            <file>file:/C:/Users/Yuji%20Tashiro/Documents/Web3/WebApplication1/src/java/br/com/web3/controllers/CarroMB.java</file>
-            <file>file:/C:/Users/Yuji%20Tashiro/Documents/Web3/WebApplication1/src/java/br/com/web3/conexao/Conexao.java</file>
-            <file>file:/C:/Users/Yuji%20Tashiro/Documents/Web3/WebApplication1/web/carro_datatable.xhtml</file>
+            <file>file:/C:/Users/Yuji%20Tashiro/Documents/GitHub/Projeto-Web3/WebApplication1/web/carro_cadastro.xhtml</file>
+            <file>file:/C:/Users/Yuji%20Tashiro/Documents/GitHub/Projeto-Web3/WebApplication1/web/template/carro_cadastro.xhtml</file>
+            <file>file:/C:/Users/Yuji%20Tashiro/Documents/GitHub/Projeto-Web3/WebApplication1/src/java/br/com/web3/dao/CarroDAO.java</file>
+            <file>file:/C:/Users/Yuji%20Tashiro/Documents/GitHub/Projeto-Web3/WebApplication1/web/template/tabela_vagas.xhtml</file>
+            <file>file:/C:/Users/Yuji%20Tashiro/Documents/GitHub/Projeto-Web3/WebApplication1/web/template/carro_datatable.xhtml</file>
+            <file>file:/C:/Users/Yuji%20Tashiro/Documents/GitHub/Projeto-Web3/WebApplication1/src/java/org/primefaces/showcase/view/ajax/DropdownView.java</file>
+            <file>file:/C:/Users/Yuji%20Tashiro/Documents/GitHub/Projeto-Web3/WebApplication1/src/java/br/com/web3/controllers/CarroMB.java</file>
         </group>
     </open-files>
 </project-private>
