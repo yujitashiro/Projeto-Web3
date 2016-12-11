@@ -10,6 +10,8 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
 import org.primefaces.context.RequestContext;
 import org.primefaces.event.CellEditEvent;
 import org.primefaces.event.RowEditEvent;
@@ -20,10 +22,32 @@ public class CarroMB implements Serializable {
 
     private Carro carro = new Carro();
     private List<Carro> carroLista = new ArrayList<Carro>();
+    
+    @Length(min = 7, max=7, message = "A Placa deve contar 7 caracteres!")
+    private String placa;
+    
+    @NotEmpty
+    private String modelo;
+    
+    @NotEmpty
+    private String cor;
 
-    /**
-     * Creates a new instance of PessoaMB
-     */
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+    
     public CarroMB() throws SQLException {
         CarroDAO daoCarro = new CarroDAO();
         carroLista = daoCarro.listar();
@@ -48,6 +72,9 @@ public class CarroMB implements Serializable {
     public void salvarCarro() throws SQLException {
         try {
           CarroDAO daoCarro = new CarroDAO();
+            carro.setPlaca(placa);
+            carro.setModelo(modelo);
+            carro.setCor(cor);
             daoCarro.inserir(carro);
             carroLista.add(carro);
             carro = new Carro();
@@ -79,5 +106,13 @@ public class CarroMB implements Serializable {
             FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Cell Changed", "Old: " + oldValue + ", New:" + newValue);
             FacesContext.getCurrentInstance().addMessage(null, msg);
         }
+    }
+    
+    public String getPlaca() {
+        return placa;
+    }
+
+    public void setPlaca(String placa) {
+        this.placa = placa;
     }
 }
